@@ -8,7 +8,13 @@ The following image shows the web application's appearance:
 
 ## Description :page_with_curl:
 
-This code features a back end for an e-commerce site. With working Express.js API it configures the use of Sequelize to interact with a MySQL database.
+This application features a CMS-style blog site similar to a Wordpress site, where developers can publish their blog posts and comment on other developers’ posts as well. It is deployed to Heroku. This application’s folder structure follows the Model-View-Controller paradigm.
+
+Your app will follow the MVC paradigm in its architectural structure, using Handlebars.js as the templating language, Sequelize as the ORM, and the express-session npm package for authentication.
+
+ The code uses the express-handlebars to use Handlebars.js for Views, the MySQL2 and Sequelize packages to connect to a MySQL database for Models, and creates an Express.js API for Controllers.
+
+The dotenv package is used for environment variables, the bcrypt package to hash passwords, and the express-session and connect-session-sequelize packages to add authentication.
 
 ## Technology Used :label: 
 
@@ -77,3 +83,5 @@ At root of the folder:
 * run `npm i dotenv`, create file `.env`, add to gitignore
 * in`models` create `Users.js` and `index.js`
 * `routes/api/user-routes.js`CRUD
+** 
+* `feature/passowrd` ##hashing -run `npm install bcrypt`
