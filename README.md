@@ -13,6 +13,7 @@ This code features a back end for an e-commerce site. With working Express.js AP
 ## Technology Used :label: 
 
 * css
+* node
 * handlebars
 * mySQL
 * sequilize
@@ -28,11 +29,13 @@ This code features a back end for an e-commerce site. With working Express.js AP
 * [bcrypt package](https://www.npmjs.com/package/bcrypt)
 * [express-session](https://www.npmjs.com/package/express-session)
 * [connect-session-sequelize](https://www.npmjs.com/package/connect-session-sequelize)
+* [nodemon package](https://www.npmjs.com/package/nodemon)
 * [emoji-cheat-sheet:for readme](https://github.com/ikatyang/emoji-cheat-sheet)
 
 ## Installation :electric_plug:
 
 * `npm i express sequelize mysql2`
+* `npm i nodemon`
 * `npm i dotenv`
 * `npm i express-session`
 * `npm i express-handlebars`
@@ -54,3 +57,23 @@ Feel free to contact me with any questions via email :e-mail: pryadkamaryna@gmai
   
 If you'd like to see my other projects, please visit my :octocat: 
 [GitHub](https://github.com/MarynaPR?tab=repositories)
+
+
+## Set up steps:
+
+At root of the folder:
+* Run `npm init` (or `npm init -y`  manually update your package.json to "main": "server.js" instead of "main": "index.js")
+* Once that's done, update package.json with the following script:
+`"start": "node server.js"`
+* Create a .gitignore file, and add the following files and folders:
+`node_modules`
+`.DS_Store`
+* Create a `server.js` file.
+* Create folders called `models`, `routes`, `config`, and `db`.
+* Install the dependencies by using the following command:
+`npm install express sequelize mysql2`
+* in `db` create file `schema.sql`( `mysql -u root -p`, `source db/schema.sql`, `show databases;`, `quit`)
+* in config -file `connection.js`-create sql connection
+* run `npm i dotenv`, create file `.env`, add to gitignore
+* in`models` create `Users.js` and `index.js`
+* `routes/api/user-routes.js`CRUD
