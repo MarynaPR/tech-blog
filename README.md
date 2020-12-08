@@ -84,4 +84,5 @@ At root of the folder:
 * in`models` create `Users.js` and `index.js`
 * `routes/api/user-routes.js`CRUD
 ** 
-* `feature/passowrd` ##hashing -run `npm install bcrypt`
+* `feature/passowrd` ##hashing -run `npm install bcrypt` -addcode to `user-routes.js` post/login and `user.js` checkPassword(loginPw)
+* create `post.js`, require it in `models/index.js`
