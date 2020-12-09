@@ -15,4 +15,5 @@ app.use(routes);
 sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log('Now listening'));
 });
+
 //if it were set to true, it would drop and re-create all of the database tables on startup
