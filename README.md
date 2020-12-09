@@ -85,4 +85,5 @@ At root of the folder:
 * `routes/api/user-routes.js`CRUD
 ** 
 * `feature/passowrd` ##hashing -run `npm install bcrypt` -addcode to `user-routes.js` post/login and `user.js` checkPassword(loginPw)
-* create `post.js`, require it in `models/index.js`
+* create `post.js`, require it in `models/index.js`, create`post-routes.js`, require in `api/index`, add findAll(), after running mysql -u root -p, `use tech_blog_db;`(msg-db changed if sucessful), insert: `INSERT INTO post (title, post_url, user_id, created_at, updated_at) VALUES ("connect-session-sequelize",`
+`"https://www.npmjs.com/package/connect-session-sequelize", 2, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);` to GET post, rest of CRUD, in findAll()add `order: DESC` for latest posts first,
