@@ -1,0 +1,58 @@
+<ol class="post-list">
+    {{#each posts}}
+    <li>
+        <article class="post">
+            <div class="title">
+                <a href="{{post_url}}" target="_blank">{{title}}</a>
+                <span>({{post_url}})</span>
+            </div>
+            <div class="meta">
+                {{vote_count}} point(s) by {{user.username}} on
+                {{created_at}}
+                |
+                <a href="/post/{{id}}">{{comments.length}} comment(s)</a>
+            </div>
+        </article>
+    </li>
+    {{/each}}
+</ol>
+
+
+{{!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Blog</title>
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul class="flex-row">
+            <li class="li-inline nav-item"><a href="/">Home</a></li>
+            <li class="li-inline nav-item"><a href="/dashboard">Dashboard</a></li>
+            <li class="li-inline nav-item"><a href="#" id="logout-link">Logout</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>
+            <a href="/">TECH BLOG</a>
+        </h1>
+    </header>
+
+    <main>
+        {{{ body }}}
+    </main>
+
+    <footer>
+        Thanks for visiting!
+    </footer>
+    </div>
+
+</body>
+
+</html> --}}
