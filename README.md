@@ -99,7 +99,7 @@ At root of the folder:
 * choose `sign up`=> prompted to `create a username and password`
 * click on the `sign-up button`=> my user credentials are saved, I am logged in
 * revisit the site at a `later time` and `choose to sign in`=> prompted to enter `username and password`
-* when signed in=>see navigation links for the homepage, the dashboard, and the option to log out
+* when signed in=>see navigation links for the `homepage, the dashboard, and the option to log out`
 * click on the `homepage option` in the navigation => taken to the `homepage` and presented with existing blog posts that include the post `title and the date created`
 * click on an `existing blog` post=> presented with the post title, contents, post creator’s username, and date created for that post and have the option to leave a comment
 * enter a `comment` and click on the `submit` button while signed in => comment is saved and the post is updated to display the comment, the comment creator’s username, and the date created

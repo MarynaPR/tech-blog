@@ -9,13 +9,21 @@
     <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
-<body>
+<body class="flex-column min-100-vh">
     <nav class="navbar">
         <ul>
-            <li class="li-inline nav-item"><a href="/">Home</a></li>
+            <li class="li-inline nav-item"><a href="/">Homepage</a></li>
             <li class="li-inline nav-item"><a href="/dashboard">Dashboard</a></li>
             <li class="li-inline nav-item"><a href="/login">Login</a></li>
-            <li class="li-inline nav-item"><a href="#" id="logout-link">Logout</a></li>
+            {{!-- <li class="li-inline nav-item"><a href="#" id="logout-link">Logout</a></li> --}}
+            {{#if loggedIn}}
+            {{!-- <a href="/dashboard">dashboard</a> --}}
+            <button id="logout" class="btn-no-style">logout</button>
+            {{/if}}
+            {{#unless loggedIn}}
+
+            <a href="/login">login</a>
+            {{/unless}}
         </ul>
     </nav>
 
@@ -29,7 +37,7 @@
         {{{ body }}}
     </main>
 
-    <footer>
+    <footer class="flex-row justify-center">
         Thanks for visiting!
     </footer>
     </div>
