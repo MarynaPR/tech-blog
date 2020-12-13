@@ -4,22 +4,87 @@
     --light-dark: #6f6866;
     --dark: rgb(59, 55, 55);
   }
-  * {
+* {
     box-sizing: border-box;
-  }
-  
-  body {
+}
+
+body {
     background-color: var(--primary);
+    font-family: 'Courier New', Courier, monospace;
     color: var(--dark);
     font-size: 15px;
-  }
-  .navbar {
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  margin: 0;
+  color: var(--dark);
+  line-height: 1.25;
+}
+.navbar {
     width: 100%;
     background-color: var(--dark);
-  }
-  .nav-item a {
+}
+.nav-item a {
     color: var(--primary);
-  }
-  .footer {
+}
+header {
+    margin-top: 50px;
+}
+  
+main {
+    margin: 20px auto;
+    width: 95%;
+}
+  
+p {
+    font-size: 1.5rem;
+}
+input {
+    width: 100%;
+    border: 1px solid;
+    background:var(--primary);
+    margin: 0 0 5px;
+    padding: 10px;
+}
+
+.list-item {
+  margin-bottom: 10px;
+  padding: 1.5%;
+  border-radius: var(--border-radius);
+  background-color: var(--light-dark);
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.list-item:hover {
+  background-color: var(--dark);
+}
+.card-header h2 {
+  color: var(--primary);
+}
+.btn {
+  font-size: 1.5rem;
+  padding: 5px 5px;
+  width: 100%;
+  display: block;
+  margin: 5px 0;
+  border-radius: var(--border-radius);
+  color: var(--primary);
+  border: none;
+  background-color: var(--light-dark);
+  transform: translate(-1px, -1px);
+}
+.hero {
+  padding: 3% 4%;
+  background-color: var(--dark);
+  color: var(--primary);
+}
+
+.footer {
     display: inline-block;
   }

@@ -94,10 +94,7 @@ At root of the folder:
 
 # User Story
 * presented with the homepage, which includes existing `blog posts`, `navigation links` for the homepage and the dashboard; and option to `log in`
-* click on homepage option => taken to `homepage`
 * click on links in the navigation => prompted to either sign up or sign in
-* choose `sign up`=> prompted to `create a username and password`
-* click on the `sign-up button`=> my user credentials are saved, I am logged in
 * revisit the site at a `later time` and `choose to sign in`=> prompted to enter `username and password`
 * when signed in=>see navigation links for the `homepage, the dashboard, and the option to log out`
 * click on the `homepage option` in the navigation => taken to the `homepage` and presented with existing blog posts that include the post `title and the date created`
