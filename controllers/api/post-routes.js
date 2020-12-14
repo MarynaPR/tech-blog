@@ -75,12 +75,8 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/', withAuth, (req, res) => {
-    Post.create({
-        title: req.body.title,
-        post_url: req.body.post_url,
-        user_id: req.session.user_id
-        // post_body: req.body.post_body
-    })
+    const body = req.body;
+    Post.create({ ...req.body, user_id: req.session.user_id })
         .then(dbPostData => res.json(dbPostData))
         .catch(err => {
             console.log(err);
@@ -122,7 +118,6 @@ router.put('/:id', withAuth, (req, res) => {
 });
 
 router.delete('/:id', withAuth, (req, res) => {
-    // console.log('id', req.params.id);
     Post.destroy({
         where: {
             id: parseInt(req.params.id)
