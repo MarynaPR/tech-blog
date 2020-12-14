@@ -73,7 +73,7 @@ router.get('/edit/:id', withAuth, (req, res) => {
                 res.render('edit-post', {
                     post,
                     loggedIn: true,
-                    layout: 'dashboard'
+                    layout: 'main'
                 });
             } else {
                 res.status(404).end();

@@ -4,37 +4,35 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Tech Blog</title>
+    <title>the tech blog</title>
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
 <body class="flex-column min-100-vh">
-    <header class="hero">
-        <h1 class="app-title"><a href="/dashboard">Your Dashboard</a></h1>
-    </header>
+    <nav class="hero">
+        <h3 class="app-title"><a href="/dashboard">your dashboard</a></h3>
+    </nav>
     <section>
-        <h2>Create New Post</h2>
-
+        <h2>create new post</h2>
         <form id="new-post-form" class="card-body">
-            <label class="form-label" for="post-title">Title</label>
+            <label class="form-label" for="post-title">title</label>
             <input type="text" name="post-title" class="form-input" />
 
-            <label class="form-label" for="post-body">Content</label>
+            <label class="form-label" for="post-body">post url</label>
             <textarea name="post-body" class="form-input"></textarea>
 
-            <button type="submit" class="btn">Create</button>
+            <button type="submit" class="btn">create</button>
         </form>
     </section>
     {{#if posts.length}}
     <section>
-
-        <h2>Your Posts</h2>
+        <h2>your posts</h2>
         <ol>
             {{#each posts as |post|}}
             <li>
                 {{> post-info}}
-                <a href="dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+                <a href="dashboard/edit/{{post.id}}" class="edit-link">edit post</a>
             </li>
             {{/each}}
         </ol>
