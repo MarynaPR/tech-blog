@@ -1,4 +1,5 @@
 async function logout() {
+
     const response = await fetch('/api/users/logout', {
         method: 'post',
         headers: { 'Content-Type': 'application/json' }
@@ -16,7 +17,6 @@ document.querySelector('#logout-link').addEventListener('click', logout);
 function idleTimer() {
     var time;
     window.onmousemove = restartTimer;
-    window.onmousedown = restartTimer;
     window.onclick = restartTimer;
     window.onscroll = restartTimer;
     window.onkeypress = restartTimer;

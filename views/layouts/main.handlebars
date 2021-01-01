@@ -10,24 +10,31 @@
 </head>
 
 <body class="flex-column min-100-vh">
+
     <nav class="navbar">
         <ul>
             <li class="li-inline nav-item"><a href="/">homepage</a></li>
+            {{#if loggedIn}}
             <li class="li-inline nav-item"><a href="/dashboard">dashboard</a></li>
-            <li class="li-inline nav-item"><a href="/login">login</a></li>
             <li class="li-inline nav-item"><a href="#" id="logout-link">logout</a></li>
-            <h2><a href="/"> your tech blog</a></h2>
+            {{else}}
+            <li class="li-inline nav-item"><a href="/login">login</a></li>
+            {{/if}}
         </ul>
+        <h2><a href="/"> your tech blog</a></h2>
     </nav>
 
     <main class="col-auto">
         {{{ body }}}
     </main>
-    </div>
+
+    <footer class="flex-row justify-center">
+        <h4>thanks for visiting!</h4>
+    </footer>
+
+    {{#if loggedIn}}
+    <script src="/javascript/logout.js"></script>
+    {{/if}}
 </body>
-<footer class="flex-row justify-center">
-    <h4>thanks for visiting!</h4>
-</footer>
 
 </html>
-<script src="/javascript/logout.js"></script>

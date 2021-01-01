@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Post, Comment, Vote } = require('../../models');
+const { User, Post, Comment } = require('../../models');
 
 router.get('/', (req, res) => {
     User.findAll({
@@ -21,7 +21,7 @@ router.get('/:id', (req, res) => {
         include: [
             {
                 model: Post,
-                attributes: ['id', 'title', 'post_url', 'created_at']
+                attributes: ['id', 'title', 'post_body', 'created_at']
             },
             {
                 model: Comment,
@@ -30,12 +30,6 @@ router.get('/:id', (req, res) => {
                     model: Post,
                     attributes: ['title']
                 }
-            },
-            {
-                model: Post,
-                attributes: ['title'],
-                through: Vote,
-                as: 'voted_posts'
             }
         ]
     })
@@ -56,7 +50,6 @@ router.post('/', (req, res) => {
 
     User.create({
         username: req.body.username,
-        email: req.body.email,
         password: req.body.password
     })
         .then(dbUserData => {
@@ -77,7 +70,7 @@ router.post('/', (req, res) => {
 router.post('/login', (req, res) => {
     User.findOne({
         where: {
-            email: req.body.email
+            username: req.body.username
         }
     }).then(dbUserData => {
         if (!dbUserData) {
@@ -96,7 +89,6 @@ router.post('/login', (req, res) => {
             req.session.user_id = dbUserData.id;
             req.session.username = dbUserData.username;
             req.session.loggedIn = true;
-
             res.json({ user: dbUserData, message: 'You are now logged in!' });
         });
     });
