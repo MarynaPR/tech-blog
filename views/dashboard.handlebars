@@ -1,12 +1,4 @@
-<div class="flex-column min-100-vh">
-    <nav class="hero">
-        <h3 class="app-title"><a href="/dashboard">your dashboard</a></h3>
-    </nav>
-    <section>
-        <a href="/dashboard/new" type="submit" class="btn"> create new post</a>
-    </section>
-
-</div>
+{{!--
 
 {{#if posts.length}}
 <section>
@@ -24,4 +16,31 @@
 
 <script src="/javascript/new-post.js"></script>
 <script src="/javascript/edit-post.js"></script>
+<script src="/javascript/logout.js"></script> --}}
+
+{{#if posts.length}}
+<section>
+    <ol class="list-unstyled">
+        {{#each posts as |post|}}
+        <li>
+            <div class="card-header">
+                <a href="/dashboard/edit/{{post.id}}" class="edit-link">{{post.title}}edit post</a>
+            </div>
+        </li>
+        {{/each}}
+    </ol>
+</section>
+{{/if}}
+<div class="flex-column min-100-vh">
+    <nav class="hero">
+        <h3 class="app-title"><a href="/dashboard">your dashboard</a></h3>
+    </nav>
+    <section>
+        <a href="/dashboard/new" type="submit" class="btn"> create new post</a>
+    </section>
+
+</div>
+{{!--
+<script src="/javascript/new-post.js"></script>
+<script src="/javascript/edit-post.js"></script> --}}
 <script src="/javascript/logout.js"></script>

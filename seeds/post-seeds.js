@@ -13,6 +13,6 @@ const postdata = [
         user_id: 2
     }
 ]
-const seedPosts = () => Post.bulkCreate([postdata]);
+const seedPosts = () => Post.bulkCreate(postdata);
 
 module.exports = seedPosts;

@@ -1,5 +1,4 @@
 const router = require('express').Router();
-const sequelize = require('../../config/connection');
 const { Post, User, Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
@@ -121,23 +120,5 @@ router.delete('/:id', withAuth, (req, res) => {
         });
 });
 
-router.delete("/:id", withAuth, (req, res) => {
-    Post.destroy({
-        where: {
-            id: req.params.id
-        }
-    })
-        .then(dbDeleteData => {
-            if (dbData > 0) {
-                res.status(200).end();
-            } else {
-                res.status(404).end();
-            };
-        })
-        .catch(err => {
-            console.log(err);
-            res.status(500).json(err);
-        });
-});
 
 module.exports = router;

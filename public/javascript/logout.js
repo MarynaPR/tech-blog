@@ -21,7 +21,7 @@ function idleTimer() {
     window.onscroll = restartTimer;
     window.onkeypress = restartTimer;
     function logout() {
-        window.location.href = '/';
+        window.location.href = '/login';
     }
     function reload() {
         window.location = self.location.href;
