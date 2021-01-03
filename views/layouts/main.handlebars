@@ -14,8 +14,8 @@
     <nav class="navbar">
         <ul>
             <li class="li-inline nav-item"><a href="/">homepage</a></li>
-            {{#if loggedIn}}
             <li class="li-inline nav-item"><a href="/dashboard">dashboard</a></li>
+            {{#if loggedIn}}
             <li class="li-inline nav-item"><a href="#" id="logout-link">logout</a></li>
             {{else}}
             <li class="li-inline nav-item"><a href="/login">login</a></li>

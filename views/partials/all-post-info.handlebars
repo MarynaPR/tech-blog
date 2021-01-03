@@ -1,9 +1,8 @@
 <article class="post">
-    {{#each posts}}
-    <a class="list-item flex-row justify-space-between" href="/dashboard/edit/{{id}}">
-        <span>{{format_date createdAt}}</span>
-        <span>{{title}}</span>
-        <span>{{post_body}}</span>
-    </a>
-    {{/each}}
+    <div class="title">
+        <div class="list-item">
+            <a href="/post/{{id}}">{{title}}</a>
+        </div>
+        <span>{{format_date created_at}}</span>
+    </div>
 </article>
