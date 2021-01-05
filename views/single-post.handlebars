@@ -1,33 +1,49 @@
-{{!-- post title,
-contents,
-post creator’s username,
-and date created for that post
-and have the option to leave a comment--}}
-
-
-{{#if loggedIn}}
-<form class="comment-form">
-    <div>
-        <textarea name="comment-body"></textarea>
+<div class="card">
+    <div class="card-header">
+        Posted by {{post.user.username}} on {{format_date post.createdAt}}
     </div>
-    <div>
-        <button type="submit">add comment</button>
+    <div class="card-body">
+        <h4 class="card-title">{{post.title}}</h4>
+        <p class="card-text">
+            {{post.post_body}}
+        </p>
     </div>
-</form>
-{{/if}}
-
-<div class="list-item">
-    <a>{{post.title}}</a>
-    <div>
-        {{post.post_body}}
-    </div>
-    <div>
-        Created by {{post.username}} on {{format_date created_at}}</div>
 </div>
 
+{{#if post.Comments}}
+<div class="container">
+    <article class="post">
+        <ul class="list-group">
+            <li class="list-group-item">
+                {{#each post.Comments}}
+                <div>
+                    <p>
+                        {{comment_text}}
+                    </p>
+                    <p>
+                        &mdash; {{User.username}}, {{format_date createdAt}}
+                    </p>
+            </li>
+            {{/each}}
+        </ul>
+    </article>
+</div>
+{{/if}}
 
+<form class="comment-form card">
+    <div class="card-header">
+        <h3>add new comment</h3>
+    </div>
+    <div class="card-body">
+        <input type="hidden" name="post-id" value="{{post.id}}" />
+        <label class="form-label" for="comment-body"></label>
+        <textarea name="comment-body" class="form-input"></textarea>
+        <button type="submit" class="btn btn-danger">Submit</button>
+    </div>
+</form>
+
+<br>
 {{> comments post.comments}}
-
 {{#if loggedIn}}
 <script src="/javascript/comment.js"></script>
 {{/if}}

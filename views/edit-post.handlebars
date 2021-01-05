@@ -1,18 +1,19 @@
 <div class="post card">
-    <a href="/dashboard"> &larr; back to dashboard</a>
-    <h5>edit post</h5>
+    <a class=" " href="/dashboard"> &larr; back to dashboard</a>
+    <h3>edit post</h3>
     <form class="edit-post-form">
         <input type="hidden" id="post-id" name="post-id" value="{{post.id}}" />
-
         <label class="form-label" for="post-title">title</label>
         <input type="text" name="post-title" value="{{post.title}}" class="form-input" />
-
+        <br>
+        <br>
         <label class="form-label" for="post-body">post</label>
         <textarea name="post-body" class="form-input">{{post.post_body}}</textarea>
-
-
-        <button type="submit" class="btn">update</button>
-        <button type="button" class="delete-btn" class="btn">delete</button>
+        <br>
+        <button type="submit" class="btn btn-danger">update</button>
+        <br>
+        <br>
+        <button type="button" class="delete-btn btn-danger">delete</button>
     </form>
 </div>
 

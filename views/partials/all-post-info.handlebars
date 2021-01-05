@@ -1,8 +1,11 @@
-<article class="post">
-    <div class="title">
-        <div class="list-item">
-            <a href="/post/{{id}}">{{title}}</a>
-        </div>
-        <span>{{format_date created_at}}</span>
-    </div>
-</article>
+<div class="container">
+    <br>
+    <article class="post">
+        <ul class="list-group">
+            <li class="list-group-item">
+                <a class="text-dark" href=" /post/{{id}}">{{title}}</a>
+            </li>
+            <span> created on {{format_date created_at}}</span>
+        </ul>
+    </article>
+</div>
