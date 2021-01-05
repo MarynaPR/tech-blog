@@ -4,7 +4,7 @@
 
 The following image shows the web application's appearance:
 
-![Screenshot](config/Screenshot1.png)
+![Screenshot](public/images/Screenshot.png)
 
 ## Description :page_with_curl:
 
