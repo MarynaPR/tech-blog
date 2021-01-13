@@ -8,7 +8,8 @@ The following image shows the web application's appearance:
 
 ## Description :page_with_curl:
 
-This application features a CMS-style blog site where developers can publish their blog posts and comment on other developers’ posts as well. It is deployed to Heroku. This application’s folder structure follows the Model-View-Controller paradigm in its architectural structure, using Handlebars.js as the templating language, Sequelize as the ORM, and the express-session npm package for authentication.
+This application features a CMS-style blog site with homepage, dashboard and login option where developers can publish their blog posts and comment on other developers’ posts as well. 
+ It is deployed to [Heroku](https://sheltered-peak-84487.herokuapp.com/). This application’s folder structure follows the Model-View-Controller paradigm in its architectural structure, using Handlebars.js as the templating language, Sequelize as the ORM, and the express-session npm package for authentication.
 
 The code uses the express-handlebars to use Handlebars.js for Views, the MySQL2 and Sequelize packages to connect to a MySQL database for Models, and creates an Express.js API for Controllers.
 
